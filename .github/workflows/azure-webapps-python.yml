@@ -41,7 +41,7 @@ jobs:
       working-directory: ./
     
     - name: Log into Azure using publish profile
-      uses: azure/login@v1
+      uses: azure/login@v1.6.1
       with:
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
 
