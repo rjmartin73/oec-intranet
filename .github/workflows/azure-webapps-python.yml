@@ -45,6 +45,5 @@ jobs:
       with:
         app-name: oec-intranet
         slot-name: Production
-        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
         package: .
         startup-command: 'gunicorn intranet.wsgi --bind=0.0.0.0 --timeout 600'
