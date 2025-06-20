@@ -18,7 +18,7 @@ jobs:
         pwd
         ls -lah
         find . -name "requirements.txt"
-        
+
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
@@ -27,17 +27,17 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        pip install -r oec-intranet/requirements.txt
       working-directory: ./
 
     - name: Apply migrations
       run: |
-        python manage.py migrate --noinput
+        python oec-intranet/manage.py migrate --noinput
       working-directory: ./
 
     - name: Collect static files
       run: |
-        python manage.py collectstatic --noinput
+        python oec-intranet/manage.py collectstatic --noinput
       working-directory: ./
 
     - name: Deploy to Azure Web App
