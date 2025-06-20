@@ -40,11 +40,6 @@ jobs:
         python oec-intranet/manage.py collectstatic --noinput
       working-directory: ./
     
-    - name: Log into Azure using publish profile
-      uses: azure/login@v1.6.1
-      with:
-        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
-
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
       with:
