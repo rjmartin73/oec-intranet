@@ -46,4 +46,4 @@ jobs:
         app-name: oec-intranet
         slot-name: Production
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
-        package: .
+        package: ./oec-intranet
