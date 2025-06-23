@@ -1,3 +1,5 @@
 .env
 view-structure.sh
 /oec-intranet
+frontend/node_modules/
+frontend/build/
