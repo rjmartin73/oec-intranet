@@ -21,6 +21,5 @@ from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    re_path(r"^.*$", TemplateView.as_view(template_name="index.html"), name="index"), 
-    path('', lambda request: HttpResponse("🚀 Hello from OEC Intranet!")),
+    re_path(r"^.*$", TemplateView.as_view(template_name="index.html"), name="index"),
 ]
