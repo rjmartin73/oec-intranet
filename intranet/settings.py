@@ -88,7 +88,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'intranet.wsgi.application'
 
 # Point Django to the React build
-TEMPLATES[0] = [
+TEMPLATES[0]["DIRS"] = [
     os.path.join(BASE_DIR, 'frontend', 'build')
 ]
 
