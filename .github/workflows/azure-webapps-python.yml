@@ -18,6 +18,12 @@ jobs:
         pwd
         ls -lah
         find . -name "requirements.txt"
+    
+    - name: Build react frontend
+      run: |
+        cd frontend
+        npm install
+        npm run build
 
     - name: Set up Python
       uses: actions/setup-python@v5
