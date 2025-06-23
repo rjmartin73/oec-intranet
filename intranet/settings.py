@@ -65,7 +65,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
 ]
+
+MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ROOT_URLCONF = 'intranet.urls'
 
@@ -89,12 +94,13 @@ WSGI_APPLICATION = 'intranet.wsgi.application'
 
 # Point Django to the React build
 TEMPLATES[0]["DIRS"] = [
-    os.path.join(BASE_DIR, 'frontend', 'build')
+    os.path.join(BASE_DIR, 'frontend', 'build',)
 ]
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'frontend', 'build', 'static'),
 ]
+
 
 
 
