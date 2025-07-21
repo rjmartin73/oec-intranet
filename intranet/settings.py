@@ -111,8 +111,18 @@ STATICFILES_DIRS = [
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'mssql',                            # use the mssql-django backend
+        'NAME': 'YourDatabaseName',                   # e.g. 'intranet_db'
+        'USER': 'your_db_username',
+        'PASSWORD': 'your_db_password',
+        'HOST': 'your_db_server_hostname_or_ip',       # e.g. 'localhost' or 'db.example.com'
+        'PORT': '1433',                                # default SQL Server port
+        'OPTIONS': {
+            'driver': 'ODBC Driver 18 for SQL Server',# match your installed ODBC driver
+            # If you need encryption/trust settings:
+            # 'encrypt': True,
+            # 'trust_server_certificate': True,
+        },
     }
 }
 
