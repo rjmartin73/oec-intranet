@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_27784704595a019a76c28b7f0f1e97ab {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_27784704595a019a76c28b7f0f1e97ab" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_27784704595a019a76c28b7f0f1e97ab = L.map(
+                "map_27784704595a019a76c28b7f0f1e97ab",
+                {
+                    center: [30.3322, -81.6557],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_0247a1d5143833bd350e52d6adb0f0b1 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_0247a1d5143833bd350e52d6adb0f0b1.addTo(map_27784704595a019a76c28b7f0f1e97ab);
+        
+    
+            var marker_26b77f2178dd1a827f56bcc23ffcbbae = L.marker(
+                [30.4903603, -81.6309287],
+                {
+}
+            ).addTo(map_27784704595a019a76c28b7f0f1e97ab);
+        
+    
+        var popup_914db7a17508bfa0c6472ca836d9e249 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6787fe628b1e6ab8efe0506f4b3e1392 = $(`<div id="html_6787fe628b1e6ab8efe0506f4b3e1392" style="width: 100.0%; height: 100.0%;">Integra River Run</div>`)[0];
+                popup_914db7a17508bfa0c6472ca836d9e249.setContent(html_6787fe628b1e6ab8efe0506f4b3e1392);
+            
+        
+
+        marker_26b77f2178dd1a827f56bcc23ffcbbae.bindPopup(popup_914db7a17508bfa0c6472ca836d9e249)
+        ;
+
+        
+    
+    
+            marker_26b77f2178dd1a827f56bcc23ffcbbae.bindTooltip(
+                `<div>
+                     Integra River Run
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8f1a1c8f09c494a04ca5d1fcc660fa0c = L.marker(
+                [30.2826426, -81.8587602],
+                {
+}
+            ).addTo(map_27784704595a019a76c28b7f0f1e97ab);
+        
+    
+        var popup_5a4777cfe5f1c4d19e1e1181ab13f480 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7dc17eff5b6a89ed38995bc962b681af = $(`<div id="html_7dc17eff5b6a89ed38995bc962b681af" style="width: 100.0%; height: 100.0%;">Liberty Square</div>`)[0];
+                popup_5a4777cfe5f1c4d19e1e1181ab13f480.setContent(html_7dc17eff5b6a89ed38995bc962b681af);
+            
+        
+
+        marker_8f1a1c8f09c494a04ca5d1fcc660fa0c.bindPopup(popup_5a4777cfe5f1c4d19e1e1181ab13f480)
+        ;
+
+        
+    
+    
+            marker_8f1a1c8f09c494a04ca5d1fcc660fa0c.bindTooltip(
+                `<div>
+                     Liberty Square
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6844c77a6c42a4607a5618a912a9846f = L.marker(
+                [30.4626905, -81.7152352],
+                {
+}
+            ).addTo(map_27784704595a019a76c28b7f0f1e97ab);
+        
+    
+        var popup_269ec67b5dde656fdf11b19a7faa7156 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_58ab383e89868276611b8d72e8d12037 = $(`<div id="html_58ab383e89868276611b8d72e8d12037" style="width: 100.0%; height: 100.0%;">Loggia Pointe</div>`)[0];
+                popup_269ec67b5dde656fdf11b19a7faa7156.setContent(html_58ab383e89868276611b8d72e8d12037);
+            
+        
+
+        marker_6844c77a6c42a4607a5618a912a9846f.bindPopup(popup_269ec67b5dde656fdf11b19a7faa7156)
+        ;
+
+        
+    
+    
+            marker_6844c77a6c42a4607a5618a912a9846f.bindTooltip(
+                `<div>
+                     Loggia Pointe
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b4f14e124421b84777e27c13fd661a59 = L.marker(
+                [30.325583, -81.4958557],
+                {
+}
+            ).addTo(map_27784704595a019a76c28b7f0f1e97ab);
+        
+    
+        var popup_8dc4f2f9e36a0547afcb1a258a67001c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5bc01a6b80e48b8c60bfa478006270ba = $(`<div id="html_5bc01a6b80e48b8c60bfa478006270ba" style="width: 100.0%; height: 100.0%;">Lux at Sorrel</div>`)[0];
+                popup_8dc4f2f9e36a0547afcb1a258a67001c.setContent(html_5bc01a6b80e48b8c60bfa478006270ba);
+            
+        
+
+        marker_b4f14e124421b84777e27c13fd661a59.bindPopup(popup_8dc4f2f9e36a0547afcb1a258a67001c)
+        ;
+
+        
+    
+    
+            marker_b4f14e124421b84777e27c13fd661a59.bindTooltip(
+                `<div>
+                     Lux at Sorrel
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1ffb870ec80c4c0eebd0a700b4acdf8a = L.marker(
+                [30.3620932, -81.4205111],
+                {
+}
+            ).addTo(map_27784704595a019a76c28b7f0f1e97ab);
+        
+    
+        var popup_ef20b60a4674b7507cfd9b805a256df5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_191eeb8fbad310398f94399956752516 = $(`<div id="html_191eeb8fbad310398f94399956752516" style="width: 100.0%; height: 100.0%;">Ocean Blue</div>`)[0];
+                popup_ef20b60a4674b7507cfd9b805a256df5.setContent(html_191eeb8fbad310398f94399956752516);
+            
+        
+
+        marker_1ffb870ec80c4c0eebd0a700b4acdf8a.bindPopup(popup_ef20b60a4674b7507cfd9b805a256df5)
+        ;
+
+        
+    
+    
+            marker_1ffb870ec80c4c0eebd0a700b4acdf8a.bindTooltip(
+                `<div>
+                     Ocean Blue
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_994652770b5b37b3311127c83167f4e8 = L.marker(
+                [30.324571, -81.668626],
+                {
+}
+            ).addTo(map_27784704595a019a76c28b7f0f1e97ab);
+        
+    
+        var popup_e3c612413285054848366cdedfa588c8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a8b0c4982faf855115a0a1e2cc5bc148 = $(`<div id="html_a8b0c4982faf855115a0a1e2cc5bc148" style="width: 100.0%; height: 100.0%;">One Riverside</div>`)[0];
+                popup_e3c612413285054848366cdedfa588c8.setContent(html_a8b0c4982faf855115a0a1e2cc5bc148);
+            
+        
+
+        marker_994652770b5b37b3311127c83167f4e8.bindPopup(popup_e3c612413285054848366cdedfa588c8)
+        ;
+
+        
+    
+    
+            marker_994652770b5b37b3311127c83167f4e8.bindTooltip(
+                `<div>
+                     One Riverside
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8f3bfdeaf24cc70f67d95f5b47221912 = L.marker(
+                [30.2339951, -81.9293377],
+                {
+}
+            ).addTo(map_27784704595a019a76c28b7f0f1e97ab);
+        
+    
+        var popup_d6120cab4c9eb459fbdbc331e6c48ecb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4701ec46c3e90097b887c4771332be66 = $(`<div id="html_4701ec46c3e90097b887c4771332be66" style="width: 100.0%; height: 100.0%;">Saddle Brook Landings</div>`)[0];
+                popup_d6120cab4c9eb459fbdbc331e6c48ecb.setContent(html_4701ec46c3e90097b887c4771332be66);
+            
+        
+
+        marker_8f3bfdeaf24cc70f67d95f5b47221912.bindPopup(popup_d6120cab4c9eb459fbdbc331e6c48ecb)
+        ;
+
+        
+    
+    
+            marker_8f3bfdeaf24cc70f67d95f5b47221912.bindTooltip(
+                `<div>
+                     Saddle Brook Landings
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_bce3eb0bd13eea8d942d4e8ada850db7 = L.marker(
+                [30.2323998, -81.9221481],
+                {
+}
+            ).addTo(map_27784704595a019a76c28b7f0f1e97ab);
+        
+    
+        var popup_e9b642ff8bb0369e4cbabe1ceb6e5ef4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_95b99e5eec72846fea5fc167bce57ac7 = $(`<div id="html_95b99e5eec72846fea5fc167bce57ac7" style="width: 100.0%; height: 100.0%;">Saddle Brook Landings Annex</div>`)[0];
+                popup_e9b642ff8bb0369e4cbabe1ceb6e5ef4.setContent(html_95b99e5eec72846fea5fc167bce57ac7);
+            
+        
+
+        marker_bce3eb0bd13eea8d942d4e8ada850db7.bindPopup(popup_e9b642ff8bb0369e4cbabe1ceb6e5ef4)
+        ;
+
+        
+    
+    
+            marker_bce3eb0bd13eea8d942d4e8ada850db7.bindTooltip(
+                `<div>
+                     Saddle Brook Landings Annex
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_762cedf0c176e10511268d021bee7c3e = L.marker(
+                [30.2479156, -81.8145512],
+                {
+}
+            ).addTo(map_27784704595a019a76c28b7f0f1e97ab);
+        
+    
+        var popup_e4eef69865dbbebdb404a4a41ce68559 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_de8c2fbce3a199a5f6a8ebaf9cb1533b = $(`<div id="html_de8c2fbce3a199a5f6a8ebaf9cb1533b" style="width: 100.0%; height: 100.0%;">The Finley</div>`)[0];
+                popup_e4eef69865dbbebdb404a4a41ce68559.setContent(html_de8c2fbce3a199a5f6a8ebaf9cb1533b);
+            
+        
+
+        marker_762cedf0c176e10511268d021bee7c3e.bindPopup(popup_e4eef69865dbbebdb404a4a41ce68559)
+        ;
+
+        
+    
+    
+            marker_762cedf0c176e10511268d021bee7c3e.bindTooltip(
+                `<div>
+                     The Finley
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5b3405bfee76542cd7cf67065c4bc9a4 = L.marker(
+                [30.2631369, -81.5299696],
+                {
+}
+            ).addTo(map_27784704595a019a76c28b7f0f1e97ab);
+        
+    
+        var popup_7a1fc260faa900d6b2f74608df0860ec = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b34291d0693d94b3e342e329b12f9f24 = $(`<div id="html_b34291d0693d94b3e342e329b12f9f24" style="width: 100.0%; height: 100.0%;">The Jaxon</div>`)[0];
+                popup_7a1fc260faa900d6b2f74608df0860ec.setContent(html_b34291d0693d94b3e342e329b12f9f24);
+            
+        
+
+        marker_5b3405bfee76542cd7cf67065c4bc9a4.bindPopup(popup_7a1fc260faa900d6b2f74608df0860ec)
+        ;
+
+        
+    
+    
+            marker_5b3405bfee76542cd7cf67065c4bc9a4.bindTooltip(
+                `<div>
+                     The Jaxon
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f1cef685a920847b0a6235ced1c2b740 = L.marker(
+                [30.2552654, -81.6224244],
+                {
+}
+            ).addTo(map_27784704595a019a76c28b7f0f1e97ab);
+        
+    
+        var popup_1143d688e627e3ae859bbe4316aaab6a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b5bd10d03730d69e731bbcd9e6be8e62 = $(`<div id="html_b5bd10d03730d69e731bbcd9e6be8e62" style="width: 100.0%; height: 100.0%;">The Maggie Flats</div>`)[0];
+                popup_1143d688e627e3ae859bbe4316aaab6a.setContent(html_b5bd10d03730d69e731bbcd9e6be8e62);
+            
+        
+
+        marker_f1cef685a920847b0a6235ced1c2b740.bindPopup(popup_1143d688e627e3ae859bbe4316aaab6a)
+        ;
+
+        
+    
+    
+            marker_f1cef685a920847b0a6235ced1c2b740.bindTooltip(
+                `<div>
+                     The Maggie Flats
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_41ed6ab8e9bbfc612809247a059abefe = L.marker(
+                [30.2552654, -81.6224244],
+                {
+}
+            ).addTo(map_27784704595a019a76c28b7f0f1e97ab);
+        
+    
+        var popup_7e45c7385bbad18c2adf50c1be7e1b84 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bd6ca4b711f639082a9e88147efa5b22 = $(`<div id="html_bd6ca4b711f639082a9e88147efa5b22" style="width: 100.0%; height: 100.0%;">The Maggie Towns</div>`)[0];
+                popup_7e45c7385bbad18c2adf50c1be7e1b84.setContent(html_bd6ca4b711f639082a9e88147efa5b22);
+            
+        
+
+        marker_41ed6ab8e9bbfc612809247a059abefe.bindPopup(popup_7e45c7385bbad18c2adf50c1be7e1b84)
+        ;
+
+        
+    
+    
+            marker_41ed6ab8e9bbfc612809247a059abefe.bindTooltip(
+                `<div>
+                     The Maggie Towns
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_eed3bb9786ed566a917a636adb8e40b1 = L.marker(
+                [30.1653241, -81.5071368],
+                {
+}
+            ).addTo(map_27784704595a019a76c28b7f0f1e97ab);
+        
+    
+        var popup_7ce165649c0a9076cc560f35cf444578 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cdecbc8d7c08e8bfc7dbca84be5fbd14 = $(`<div id="html_cdecbc8d7c08e8bfc7dbca84be5fbd14" style="width: 100.0%; height: 100.0%;">The Menlo</div>`)[0];
+                popup_7ce165649c0a9076cc560f35cf444578.setContent(html_cdecbc8d7c08e8bfc7dbca84be5fbd14);
+            
+        
+
+        marker_eed3bb9786ed566a917a636adb8e40b1.bindPopup(popup_7ce165649c0a9076cc560f35cf444578)
+        ;
+
+        
+    
+    
+            marker_eed3bb9786ed566a917a636adb8e40b1.bindTooltip(
+                `<div>
+                     The Menlo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_682a044fd5e1d43e953292b95ad13a03 = L.marker(
+                [30.3350448, -81.5464454],
+                {
+}
+            ).addTo(map_27784704595a019a76c28b7f0f1e97ab);
+        
+    
+        var popup_fad48a173b1ca30ea119159c0af4161f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6348b9ee8824ea29ed1ea14a05440847 = $(`<div id="html_6348b9ee8824ea29ed1ea14a05440847" style="width: 100.0%; height: 100.0%;">The Meridian</div>`)[0];
+                popup_fad48a173b1ca30ea119159c0af4161f.setContent(html_6348b9ee8824ea29ed1ea14a05440847);
+            
+        
+
+        marker_682a044fd5e1d43e953292b95ad13a03.bindPopup(popup_fad48a173b1ca30ea119159c0af4161f)
+        ;
+
+        
+    
+    
+            marker_682a044fd5e1d43e953292b95ad13a03.bindTooltip(
+                `<div>
+                     The Meridian
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_45ba99580eb1116d34bd25115f262db5 = L.marker(
+                [30.3311, -81.647016],
+                {
+}
+            ).addTo(map_27784704595a019a76c28b7f0f1e97ab);
+        
+    
+        var popup_38063b18b93a23e748ef66415d1766e7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5d7e8dc42cc16242998efb73732bb368 = $(`<div id="html_5d7e8dc42cc16242998efb73732bb368" style="width: 100.0%; height: 100.0%;">Union Terminal Warehouse</div>`)[0];
+                popup_38063b18b93a23e748ef66415d1766e7.setContent(html_5d7e8dc42cc16242998efb73732bb368);
+            
+        
+
+        marker_45ba99580eb1116d34bd25115f262db5.bindPopup(popup_38063b18b93a23e748ef66415d1766e7)
+        ;
+
+        
+    
+    
+            marker_45ba99580eb1116d34bd25115f262db5.bindTooltip(
+                `<div>
+                     Union Terminal Warehouse
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7fe464bcc434bca66eac0e74300c0680 = L.marker(
+                [30.2484243, -81.7604204],
+                {
+}
+            ).addTo(map_27784704595a019a76c28b7f0f1e97ab);
+        
+    
+        var popup_4e1d84d3b67f2a10d62abd09bfe2ce27 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5369516a594a30872f08de132b681967 = $(`<div id="html_5369516a594a30872f08de132b681967" style="width: 100.0%; height: 100.0%;">Vivo Living Jacksonville</div>`)[0];
+                popup_4e1d84d3b67f2a10d62abd09bfe2ce27.setContent(html_5369516a594a30872f08de132b681967);
+            
+        
+
+        marker_7fe464bcc434bca66eac0e74300c0680.bindPopup(popup_4e1d84d3b67f2a10d62abd09bfe2ce27)
+        ;
+
+        
+    
+    
+            marker_7fe464bcc434bca66eac0e74300c0680.bindTooltip(
+                `<div>
+                     Vivo Living Jacksonville
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_da649184f653b564652011acf0addd4d = L.marker(
+                [30.1660252, -81.5074279],
+                {
+}
+            ).addTo(map_27784704595a019a76c28b7f0f1e97ab);
+        
+    
+        var popup_cb0e2b9b537b80c07c60e987727aac1a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c9fc87ebdbfb8a42fafe7ff6d6a0a611 = $(`<div id="html_c9fc87ebdbfb8a42fafe7ff6d6a0a611" style="width: 100.0%; height: 100.0%;">Volta Apartments</div>`)[0];
+                popup_cb0e2b9b537b80c07c60e987727aac1a.setContent(html_c9fc87ebdbfb8a42fafe7ff6d6a0a611);
+            
+        
+
+        marker_da649184f653b564652011acf0addd4d.bindPopup(popup_cb0e2b9b537b80c07c60e987727aac1a)
+        ;
+
+        
+    
+    
+            marker_da649184f653b564652011acf0addd4d.bindTooltip(
+                `<div>
+                     Volta Apartments
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
