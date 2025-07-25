@@ -118,66 +118,80 @@ const RocketlaneTasks = () => {
           </button>
         </div>
       </div>
-
-      <table className="w-full overflow-hidden rounded-lg border border-slate-200">
-        <thead className="border-b border-slate-200 bg-slate-100 text-sm font-medium text-slate-600 dark:bg-slate-900">
-          <tr>
-            <th className="px-2.5 py-2 text-start font-medium">ID</th>
-            <th className="px-2.5 py-2 text-start font-medium">Project</th>
-            <th className="px-2.5 py-2 text-start font-medium">Project Phase</th>
-            <th className="px-2.5 py-2 text-start font-medium">Title</th>
-            <th className="px-2.5 py-2 text-start font-medium">Task Description</th>
-            <th className="px-2.5 py-2 text-start font-medium">Assignee(s)</th>
-            <th className="px-2.5 py-2 text-start font-medium">Due Date</th>
-            <th className="px-2.5 py-2 text-start font-medium">Status</th>
-          </tr>
-        </thead>
-        <tbody className="group text-sm text-slate-800 dark:text-white">
-          {tasks.map((task) => (
-            <tr key={task.taskId}>
-              <td className="p-3">{task.taskId}</td>
-              <td className="p-3">{task.project?.projectName}</td>
-              <td className="p-3">{task.projectPhase?.projectPhaseName || "No Phase"}</td>
-              <td className="p-3">{task.taskName}</td>
-              <td className="p-3"
-                dangerouslySetInnerHTML={{ __html: task.taskDescription || "" }}
-              ></td>
-              <td className="p-3">
-                {task.assignee?.users
-                  ?.map((u) => `${u.firstName} ${u.lastName || ""}`)
-                  .join(", ") || "Unassigned"}
-              </td>
-              <td className="p-3">
-                {isNaN(new Date(task.dueDate))
-                  ? "No Due Date"
-                  : new Date(task.dueDate).toLocaleDateString()}
-              </td>
-              <td
-                className={(() => {
-                  const value = task.fields?.[0]?.metaFieldValue?.value;
-                  switch (value) {
-                    case 1:
-                      return "text-primary";
-                    case 2:
-                      return "text-warning";
-                    case 3:
-                      return "text-success";
-                    case 4:
-                      return "text-secondary";
-                    case 5:
-                      return "text-danger";
-                    default:
-                      return "";
-                  }
-                })()}
-              >
-                {task.fields?.[0]?.metaFieldValue?.label?.toUpperCase() ||
-                  "No Status"}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <div className="bg-white rounded-xl shadow p-4">
+        <div className="overflow-x-auto w-full">
+          <table className="min-w-full table-auto text-sm sm:text-base">
+            <thead className="sticky top-0 bg-white shadow z-10">
+              <tr>
+                <th className="px-2 sm:px-4 py-2 text-left">ID</th>
+                <th className="px-2 sm:px-4 py-2 text-left">Project</th>
+                <th className="px-2 sm:px-4 py-2 text-left">
+                  Project Phase
+                </th>
+                <th className="px-2 sm:px-4 py-2 text-left">Title</th>
+                <th className="px-2 sm:px-4 py-2 text-left">
+                  Task Description
+                </th>
+                <th className="px-2 sm:px-4 py-2 text-left">
+                  Assignee(s)
+                </th>
+                <th className="px-2 sm:px-4 py-2 text-left">Due Date</th>
+                <th className="px-2 sm:px-4 py-2 text-left">Status</th>
+              </tr>
+            </thead>
+            <tbody className="group text-sm text-slate-800 dark:text-white">
+              {tasks.map((task) => (
+                <tr key={task.taskId}>
+                  <td className="whitespace-nowrap">{task.taskId}</td>
+                  <td className="break-words max-w-xs">{task.project?.projectName}</td>
+                  <td className="break-words max-w-xs">
+                    {task.projectPhase?.projectPhaseName || "No Phase"}
+                  </td>
+                  <td className="break-words max-w-xs">{task.taskName}</td>
+                  <td
+                    className="break-words max-w-xs"
+                    dangerouslySetInnerHTML={{
+                      __html: task.taskDescription || "",
+                    }}
+                  ></td>
+                  <td className="p-3">
+                    {task.assignee?.users
+                      ?.map((u) => `${u.firstName} ${u.lastName || ""}`)
+                      .join(", ") || "Unassigned"}
+                  </td>
+                  <td className="p-3">
+                    {isNaN(new Date(task.dueDate))
+                      ? "No Due Date"
+                      : new Date(task.dueDate).toLocaleDateString()}
+                  </td>
+                  <td
+                    className={(() => {
+                      const value = task.fields?.[0]?.metaFieldValue?.value;
+                      switch (value) {
+                        case 1:
+                          return "text-blue";
+                        case 2:
+                          return "text-orange";
+                        case 3:
+                          return "text-owen-green";
+                        case 4:
+                          return "text-secondary";
+                        case 5:
+                          return "text-red";
+                        default:
+                          return "";
+                      }
+                    })()}
+                  >
+                    {task.fields?.[0]?.metaFieldValue?.label?.toUpperCase() ||
+                      "No Status"}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   );
 };

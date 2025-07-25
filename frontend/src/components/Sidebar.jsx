@@ -1,40 +1,76 @@
 import { useState } from "react";
 import {
-    HomeIcon,
-    LockClosedIcon,
-    InformationCircleIcon,
-    Bars3Icon,
-    XMarkIcon,
-} from '@heroicons/react/24/outline'
+  HomeIcon,
+  LockClosedIcon,
+  InformationCircleIcon,
+  Bars3Icon,
+  XMarkIcon,
+} from "@heroicons/react/24/outline";
+import { NavLink } from "react-router-dom";
 
-const navItems = [
-    { name: 'Home', icon: HomeIcon },
-    { name: 'Password Strength', icon: LockClosedIcon },
-    { name: 'About', icon: InformationCircleIcon },
-];
+export default function Sidebar({ isOpen, setIsOpen }) {
+  //   const [isOpen, setIsOpen] = useState(true);
 
-export default function Sidebar(){
-
-    const [isOpen, setIsOpen] = useState(true);
-    
-    return (
-        <div className="flex h-screen">
-            {/* Sidebar */ }
-            <div
-                className={`transition-all duration-300 ${
-                    isOpen ? 'w-64' : 'w-16'
-                } flex flex-col`} >
-
-                    {/* Header */}
-                    <div className="flex items-center justify-between px-4 py-4 ">
-                    <div className="flex items-center gap-3">
-                        <img src="/owen-electric-logo-1.svg" alt="Owen Logo"
-                        className={`transition-all duration-300 ${
-                            isOpen ? 'w-32 h-32' : 'w-8 h-8 mx-auto'
-                        }`} />
-                    </div>
-                    </div>
-                </div>
+  const navItems = [
+    { name: "Home", path: "/", icon: HomeIcon },
+    {
+      name: "Password Strength",
+      path: "/passwordstrengthtester",
+      icon: LockClosedIcon,
+    },
+    {
+      name: "Rocketlane Tasks",
+      path: "/rocketlanetasks",
+      icon: InformationCircleIcon,
+    },
+    { name: "Quote Widget", path: "/quotewidget", icon: InformationCircleIcon },
+    { name: "About", path: "/about", icon: InformationCircleIcon },
+  ];
+  return (
+    <div className="flex h-screen">
+      {/* Sidebar */}
+      <div
+        className={`flex flex-col transition-all duration-300 ${
+          isOpen ? "w-64" : "w-16"
+        } `}
+      >
+        {/* Top: Logo area */}
+        <div className="bg-white border-b border-gray-200 px-4 py-1 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <img
+              src="/owen-electric-logo-1.svg"
+              alt="Owen Logo"
+              className={`transition-all duration-300 ${
+                isOpen ? "w-32 h-32" : "hidden"
+              }`}
+            />
+          </div>
+          <button onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? (
+              <XMarkIcon className="w-5 h-5 text-gray-600" />
+            ) : (
+              <Bars3Icon className="w-5 h-5 text-owen-green" />
+            )}
+          </button>
         </div>
-    );
-}; 
+        {/* Bottom navigation */}
+        <nav className="flex-1 space-y-2 p-4 bg-owen-green text-white">
+          {navItems.map(({ name, path, icon: Icon }) => (
+            <NavLink
+              key={name}
+              to={path}
+              className={({ isActive }) =>
+                `flex items-center gap-3 px-2 py-2 rounded hover:bg-white/10 ${
+                  isActive ? "bg-white/20" : ""
+                }`
+              }
+            >
+              <Icon className="w-5 h-5" />
+              {isOpen ? <span>{name}</span> : ""}
+            </NavLink>
+          ))}
+        </nav>
+      </div>
+    </div>
+  );
+}
