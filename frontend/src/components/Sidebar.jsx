@@ -1,11 +1,17 @@
 import { useState } from "react";
 import {
   HomeIcon,
-  LockClosedIcon,
-  InformationCircleIcon,
-  Bars3Icon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
+  Lock,
+  Info,
+  Menu,
+  X,
+  ClipboardList,
+  Quote,
+  CircleQuestionMark,
+  LockOpen,
+  Users,
+} from "lucide-react";
+
 import { NavLink } from "react-router-dom";
 
 export default function Sidebar({ isOpen, setIsOpen }) {
@@ -16,15 +22,15 @@ export default function Sidebar({ isOpen, setIsOpen }) {
     {
       name: "Password Strength",
       path: "/passwordstrengthtester",
-      icon: LockClosedIcon,
+      icon: isOpen ? LockOpen :Lock,
     },
     {
       name: "Rocketlane Tasks",
       path: "/rocketlanetasks",
-      icon: InformationCircleIcon,
+      icon: ClipboardList,
     },
-    { name: "Quote Widget", path: "/quotewidget", icon: InformationCircleIcon },
-    { name: "About", path: "/about", icon: InformationCircleIcon },
+    { name: "Quote Widget", path: "/quotewidget", icon: Quote },
+    { name: "About", path: "/about", icon: Users },
   ];
   return (
     <div className="flex h-screen">
@@ -47,9 +53,9 @@ export default function Sidebar({ isOpen, setIsOpen }) {
           </div>
           <button onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? (
-              <XMarkIcon className="w-5 h-5 text-gray-600" />
+              <X className="w-5 h-5 text-gray-600" />
             ) : (
-              <Bars3Icon className="w-5 h-5 text-owen-green" />
+              <Menu className="w-5 h-5 text-owen-green" />
             )}
           </button>
         </div>
